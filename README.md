@@ -15,15 +15,19 @@ Antes de executar o projeto, certifique-se de ter o seguinte instalado:
 
    ```bash
    git clone https://github.com/jhonatanpaz95/Scraping-MercadoLivre.git
+   ```
    cd Scraping-MercadoLivre
    
 2. Intale as dependências necessárias:
+   ```bash
    pip install -r requeriments.txt
+   ```
 
-Executando o Scraping
+## Executando o Scraping
 Para iniciar o processo de scraping, execute o seguinte comando:
   ```bash
   scrapy crawl mercadolivre -o ../../data/data.jsonl
+   ```
 Este comando irá coletar os dados e salvá-los no arquivo data.jsonl na pasta data.
 
 ## Estrutura do Projeto
