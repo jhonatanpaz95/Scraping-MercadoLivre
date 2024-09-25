@@ -1,9 +1,13 @@
+import os
 import streamlit as st
 import pandas as pd
 import sqlite3
 
+# Caminho dinâmico para o arquivo 'quotes.db'
+db_path = os.path.join(os.path.dirname(__file__), '..', 'coleta', 'quotes.db')
+
 # Conectar ao banco de dados SQLite
-conn = sqlite3.connect('../coleta/quotes.db')
+conn = sqlite3.connect(db_path)
 
 # Carregar os dados da tabela 'mercadolivre_items' em um DataFrame pandas
 df = pd.read_sql_query("SELECT * FROM mercadolivre_items", conn)
